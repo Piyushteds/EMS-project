@@ -112,7 +112,7 @@ export default function Login() {
             <h2>Sign in to your workspace</h2>
             <p>
               Use the account created by your EMS
-              .NET backend.
+              project.
             </p>
           </div>
 

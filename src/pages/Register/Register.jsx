@@ -108,6 +108,7 @@ export default function Register() {
                                     type="text"
                                     value={form.fullName}
                                     onChange={change}
+                                    placeholder="Enter your full name"
                                     required
                                 />
                             </div>
@@ -122,6 +123,7 @@ export default function Register() {
                                     type="email"
                                     value={form.email}
                                     onChange={change}
+                                    placeholder="Enter your email"
                                     required
                                 />
                             </div>
@@ -137,6 +139,7 @@ export default function Register() {
                                     value={form.password}
                                     onChange={change}
                                     minLength={6}
+                                    placeholder="Enter your password"
                                     required
                                 />
                             </div>
