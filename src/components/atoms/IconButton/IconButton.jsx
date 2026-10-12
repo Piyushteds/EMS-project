@@ -1,0 +1,2 @@
+import "./IconButton.css";
+export default function IconButton({ icon: Icon, label, ...props }) { return <button className="icon-btn" aria-label={label} title={label} {...props}><Icon size={18}/></button>; }

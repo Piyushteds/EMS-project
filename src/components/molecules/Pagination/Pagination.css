@@ -1,0 +1,99 @@
+.ems-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 16px 20px;
+    border-top: 1px solid var(--border, #e7eaf0);
+    flex-wrap: wrap;
+}
+
+.ems-pagination-info {
+    color: var(--muted, #64748b);
+    font-size: 12px;
+}
+
+.ems-pagination-info strong {
+    color: var(--text, #172033);
+    font-weight: 650;
+}
+
+.ems-pagination-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.ems-page-number,
+.ems-page-arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 32px;
+    height: 32px;
+    padding: 0 8px;
+    border: 1px solid var(--border, #e2e8f0);
+    border-radius: 8px;
+    background: var(--surface, #fff);
+    color: var(--text, #334155);
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        background 180ms ease,
+        color 180ms ease,
+        border-color 180ms ease,
+        transform 180ms ease,
+        box-shadow 180ms ease;
+}
+
+.ems-page-number:hover:not(.active),
+.ems-page-arrow:hover:not(:disabled) {
+    background: var(--surface-hover, #f1f5f9);
+    border-color: #94a3b8;
+    transform: translateY(-1px);
+}
+
+.ems-page-number.active {
+    color: #fff;
+    background: #2563eb;
+    border-color: #2563eb;
+    box-shadow: 0 3px 9px rgba(37, 99, 235, 0.22);
+}
+
+.ems-page-arrow:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.ems-page-ellipsis {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    color: var(--muted, #64748b);
+}
+
+.ems-page-number:focus-visible,
+.ems-page-arrow:focus-visible {
+    outline: 3px solid rgba(37, 99, 235, 0.35);
+    outline-offset: 2px;
+}
+
+@media (max-width: 560px) {
+    .ems-pagination {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 14px;
+    }
+
+    .ems-pagination-info {
+        text-align: center;
+    }
+
+    .ems-pagination-controls {
+        flex-wrap: wrap;
+    }
+}

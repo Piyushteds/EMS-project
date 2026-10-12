@@ -1,0 +1,152 @@
+.table-wrap {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.employee-table {
+    width: 100%;
+    min-width: 900px;
+    border-collapse: collapse;
+}
+
+.employee-table th,
+.employee-table td {
+    padding: 13px 12px;
+    border-bottom: 1px solid var(--border);
+    text-align: left;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.employee-table th {
+    color: var(--muted);
+    background: var(--surface-2);
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .07em;
+}
+
+.employee-table tbody tr {
+    transition: background .18s ease;
+}
+
+.employee-table tbody tr:hover {
+    background: var(--surface-2);
+}
+
+.employee-cell {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.employee-cell strong,
+.employee-cell small {
+    display: block;
+}
+
+.employee-cell strong {
+    color: var(--text);
+    font-size: 12px;
+}
+
+.employee-cell small {
+    margin-top: 4px;
+    color: var(--muted);
+    font-size: 10px;
+}
+
+.row-actions {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.row-actions button {
+    width: 31px;
+    height: 31px;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--surface);
+    color: var(--muted);
+    cursor: pointer;
+    transition: transform .18s ease, color .18s ease,
+        background .18s ease, border-color .18s ease;
+}
+
+.row-actions button:hover {
+    transform: translateY(-1px);
+}
+
+.row-actions .action-view:hover {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.row-actions .action-edit:hover {
+    color: #d97706;
+    border-color: #d97706;
+    background: rgba(217, 119, 6, .07);
+}
+
+.row-actions .action-delete:hover {
+    color: #dc2626;
+    border-color: #dc2626;
+    background: rgba(220, 38, 38, .07);
+}
+
+.performance-cell {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.mini-progress {
+    width: 65px;
+    height: 5px;
+    overflow: hidden;
+    border-radius: 99px;
+    background: var(--surface-2);
+}
+
+.mini-progress i {
+    display: block;
+    height: 100%;
+    border-radius: 99px;
+    background: var(--primary);
+    transition: width .3s ease;
+}
+
+.empty-row {
+    padding: 28px !important;
+    text-align: center !important;
+    color: var(--muted);
+}
+
+.performance-cell {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    min-width: 90px;
+    font-size: 12px;
+    color: var(--text, #1e293b);
+}
+
+.mini-progress {
+    width: 58px;
+    height: 5px;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #edf1f7;
+}
+
+.mini-progress i {
+    display: block;
+    height: 100%;
+    border-radius: 10px;
+    background: #2563eb;
+    transition: width 0.5s ease;
+}

@@ -1,0 +1,2 @@
+import "./Select.css";
+export default function Select({ label, options = [], ...props }) { return <label className="field">{label && <span>{label}</span>}<select {...props}>{options.map((o)=><option key={o.value ?? o} value={o.value ?? o}>{o.label ?? o}</option>)}</select></label>; }

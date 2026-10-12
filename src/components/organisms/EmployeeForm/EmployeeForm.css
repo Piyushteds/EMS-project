@@ -1,0 +1,1 @@
+.employee-form{display:flex;flex-direction:column;gap:20px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.form-actions{display:flex;justify-content:flex-end;gap:10px;padding-top:8px;border-top:1px solid var(--border)}

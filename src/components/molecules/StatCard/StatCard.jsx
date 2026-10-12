@@ -1,0 +1,2 @@
+import "./StatCard.css";
+export default function StatCard({ title, value, change, icon: Icon }) { return <div className="stat-card"><div className="stat-top"><div><span>{title}</span><strong>{value}</strong></div>{Icon && <div className="stat-icon"><Icon size={21}/></div>}</div><small>{change}</small></div>; }

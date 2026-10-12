@@ -1,0 +1,2 @@
+import "./SearchBox.css";
+import { Search } from "lucide-react"; export default function SearchBox({ value, onChange, placeholder="Search..." }) { return <div className="search-box"><Search size={18}/><input value={value} onChange={(e)=>onChange(e.target.value)} placeholder={placeholder}/></div>; }

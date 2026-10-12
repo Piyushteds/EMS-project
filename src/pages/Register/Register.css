@@ -1,0 +1,262 @@
+.register-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #eff6ff, #f8fafc);
+    display: grid;
+    place-items: center;
+    padding: 30px;
+}
+
+.register-card {
+    width: min(1080px, 100%);
+    min-height: 680px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    box-shadow: 0 30px 90px rgba(15, 23, 42, 0.12);
+}
+
+.register-side {
+    position: relative;
+    overflow: hidden;
+    background: #0f172a;
+    color: #fff;
+    padding: 48px;
+}
+
+.register-side:after {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background: #2563eb;
+    right: -180px;
+    bottom: -150px;
+    opacity: 0.45;
+}
+
+.register-logo {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: #2563eb;
+    display: grid;
+    place-items: center;
+    font-size: 23px;
+    font-weight: 900;
+}
+
+.register-kicker {
+    display: block;
+    color: #93c5fd;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 0.16em;
+    margin-top: 30px;
+}
+
+.register-side h1 {
+    font-size: 42px;
+    line-height: 1.06;
+    letter-spacing: -0.04em;
+    margin: 14px 0;
+}
+
+.register-side>p {
+    color: #cbd5e1;
+    line-height: 1.7;
+}
+
+.register-benefits {
+    display: grid;
+    gap: 13px;
+    margin-top: 30px;
+}
+
+.register-benefits div {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: #e2e8f0;
+    font-size: 13px;
+}
+
+.register-benefits svg {
+    color: #60a5fa;
+}
+
+.register-mini {
+    position: absolute;
+    left: 48px;
+    bottom: 42px;
+    z-index: 2;
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+}
+
+.register-mini strong {
+    font-size: 28px;
+}
+
+.register-mini span {
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+.register-form {
+    padding: 48px 56px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.register-heading>span {
+    font-size: 11px;
+    color: var(--primary);
+    font-weight: 900;
+    letter-spacing: 0.14em;
+}
+
+.register-heading h2 {
+    font-size: 30px;
+    margin: 8px 0;
+}
+
+.register-heading p {
+    color: var(--muted);
+    line-height: 1.6;
+    margin-bottom: 22px;
+}
+
+.register-form form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.register-form label>span {
+    display: block;
+    font-size: 12px;
+    font-weight: 800;
+    margin-bottom: 7px;
+}
+
+.register-input,
+.register-form select {
+    height: 45px;
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    background: var(--surface);
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    padding: 0 11px;
+    gap: 8px;
+}
+
+.register-input:focus-within {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px var(--primary-soft);
+}
+
+.register-input input {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: var(--text);
+}
+
+.register-form select {
+    padding: 0 11px;
+}
+
+.password-status {
+    grid-column: 1/-1;
+    display: flex;
+    gap: 20px;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.password-status .ok {
+    color: #16a34a;
+    font-weight: 800;
+}
+
+.terms {
+    grid-column: 1/-1;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.register-form form>.btn {
+    grid-column: 1/-1;
+    height: 46px;
+}
+
+.register-login {
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 18px;
+}
+
+.register-login a {
+    color: var(--primary);
+    font-weight: 800;
+    text-decoration: none;
+}
+
+@media (max-width: 800px) {
+    .register-card {
+        grid-template-columns: 1fr;
+    }
+
+    .register-side {
+        display: none;
+    }
+
+    .register-form {
+        padding: 32px 24px;
+    }
+
+    .register-form form {
+        grid-template-columns: 1fr;
+    }
+
+    .password-status,
+    .terms,
+    .register-form form>.btn {
+        grid-column: auto;
+    }
+}
+
+.auth-error {
+    margin: 0 0 16px;
+    padding: 11px 13px;
+    border: 1px solid rgba(220, 60, 60, 0.25);
+    background: rgba(220, 60, 60, 0.08);
+    color: #b42318;
+    border-radius: 10px;
+    font-size: 13px;
+}
+
+.spin {
+    animation: ems-spin 1s linear infinite;
+}
+
+@keyframes ems-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}

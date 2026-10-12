@@ -1,0 +1,1 @@
+.charts-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:18px}.chart-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:18px;box-shadow:var(--shadow)}.chart-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}.chart-head h3{margin:0;font-size:16px}.chart-head span{color:var(--muted);font-size:12px}

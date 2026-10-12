@@ -1,0 +1,340 @@
+body {
+    background: var(--background);
+    color: var(--text);
+}
+
+::selection {
+    background: var(--primary-soft);
+    color: var(--primary);
+}
+
+.form-error {
+    margin: 0 0 14px;
+    padding: 11px 14px;
+    border: 1px solid rgba(220, 60, 60, 0.22);
+    background: rgba(220, 60, 60, 0.07);
+    color: #b42318;
+    border-radius: 10px;
+    font-size: 13px;
+}
+
+.loading-line {
+    padding: 12px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.empty-state {
+    padding: 28px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* Global interaction and responsive polish */
+.page-header {
+    margin-bottom: 22px;
+    animation: fadeUp 0.42s ease both;
+}
+
+.page-header h1 {
+    letter-spacing: -0.035em;
+}
+
+.page-header p {
+    color: var(--muted);
+}
+
+.stats-grid,
+.attendance-stats,
+.leave-overview,
+.payroll-stats,
+.performance-stats,
+.dept-summary {
+    gap: 15px;
+}
+
+.stats-grid>*,
+.attendance-stats>*,
+.leave-overview>*,
+.payroll-stats>*,
+.performance-stats>*,
+.dept-summary>*,
+.panel,
+.employees-card,
+.attendance-card,
+.leave-card,
+.payroll-card,
+.performance-card,
+.department-card,
+.report-card,
+.detail-card {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+    transition: transform 0.22s ease, box-shadow 0.22s ease,
+        border-color 0.22s ease;
+}
+
+.stats-grid>*,
+.attendance-stats>*,
+.leave-overview>*,
+.payroll-stats>*,
+.performance-stats>*,
+.dept-summary>* {
+    animation: fadeUp 0.42s ease both;
+}
+
+.stats-grid>*:hover,
+.department-card:hover,
+.report-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 34px rgba(18, 36, 66, 0.1);
+    border-color: rgba(37, 99, 235, 0.25);
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+}
+
+th {
+    font-size: 10px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: #738198;
+    background: var(--surface-2);
+    font-weight: 800;
+}
+
+td {
+    font-size: 12px;
+    color: var(--text);
+}
+
+tbody tr {
+    transition: background 0.15s ease;
+}
+
+tbody tr:hover {
+    background: var(--primary-soft);
+}
+
+input,
+select,
+textarea {
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    background: var(--surface);
+    color: var(--text);
+    outline: none;
+    transition: border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #6090f7;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.employee-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.employee-form input,
+.employee-form select,
+.employee-form textarea {
+    width: 100%;
+    padding: 10px 11px;
+    min-height: 40px;
+}
+
+.employee-form textarea {
+    resize: vertical;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.full-field {
+    grid-column: 1/-1;
+}
+
+.toolbar-controls {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    flex-wrap: wrap;
+}
+
+.toolbar-controls input,
+.toolbar-controls select,
+.table-search {
+    padding: 9px 11px;
+    min-height: 38px;
+    font-size: 12px;
+}
+
+.search-inline {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 10px;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    color: var(--muted);
+}
+
+.search-inline input {
+    border: 0;
+    box-shadow: none;
+    padding: 9px 0;
+    min-width: 160px;
+}
+
+.search-inline:focus-within {
+    border-color: #6090f7;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.row-actions {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.row-actions button {
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--muted);
+    border-radius: 8px;
+    min-width: 30px;
+    min-height: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 5px 8px;
+}
+
+.row-actions button:hover {
+    color: var(--primary);
+    border-color: #9bb9fa;
+    background: var(--primary-soft);
+}
+
+.approve-action {
+    color: #13834b !important;
+}
+
+.reject-action {
+    color: #c53d45 !important;
+}
+
+.payroll-preview {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 13px 15px;
+    margin-top: 15px;
+    border-radius: 10px;
+    background: var(--primary-soft);
+    color: var(--text);
+}
+
+.payroll-preview span {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.payroll-preview strong {
+    font-size: 18px;
+    color: var(--primary);
+}
+
+.leave-error {
+    margin: 14px;
+}
+
+.loading-line {
+    padding: 16px;
+    color: var(--muted);
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+.api-alert {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 10px 13px;
+    margin: 0 0 18px;
+    border: 1px solid rgba(220, 150, 30, 0.28);
+    background: rgba(245, 158, 11, 0.08);
+    color: var(--text);
+    border-radius: 10px;
+    font-size: 12px;
+    animation: fadeUp 0.3s ease both;
+}
+
+.sidebar-scrim {
+    display: none;
+}
+
+@media (max-width: 800px) {
+    .sidebar-scrim {
+        display: block;
+        position: fixed;
+        inset: 0;
+        z-index: 25;
+        background: rgba(4, 12, 28, 0.48);
+        border: 0;
+        backdrop-filter: blur(2px);
+    }
+}
+
+.checkbox-field {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center;
+    gap: 8px !important;
+    margin: 12px 0;
+}
+
+.checkbox-field input {
+    width: auto !important;
+    min-height: 0 !important;
+}

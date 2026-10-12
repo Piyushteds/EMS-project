@@ -1,0 +1,2 @@
+import "./EmptyState.css";
+export default function EmptyState({ title="No data found", description="There is nothing to display here." }) { return <div className="empty-state"><strong>{title}</strong><p>{description}</p></div>; }

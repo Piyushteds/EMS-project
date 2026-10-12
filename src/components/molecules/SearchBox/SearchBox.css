@@ -1,0 +1,1 @@
+.search-box{display:flex;align-items:center;gap:8px;border:1px solid var(--border);background:var(--surface);border-radius:9px;padding:0 12px;min-width:260px}.search-box input{border:0;outline:0;background:transparent;color:var(--text);padding:11px 0;width:100%}.search-box svg{color:var(--muted)}
